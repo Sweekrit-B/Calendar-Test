@@ -39,9 +39,10 @@
         android:id="@+id/buttonCreateEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="268dp"
         android:text="Submit Event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -99,5 +100,31 @@
         android:inputType="text"
         app:layout_constraintStart_toEndOf="@+id/tvEventName"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- RecyclerView or any view to display calendar items -->
+
+    <Button
+        android:id="@+id/calendar_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="342dp"
+        android:backgroundTint="#2196F3"
+        android:text="Display Calendars"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreateEvent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCalendars"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_display" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
